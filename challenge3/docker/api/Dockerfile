@@ -11,7 +11,7 @@ COPY package*.json ./
 RUN npm install
 
 # Copy the rest of the application
-COPY . .
+COPY * .
 
 # Set environment variable
 ENV PORT=8080
