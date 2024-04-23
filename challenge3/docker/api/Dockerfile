@@ -11,10 +11,14 @@ COPY package*.json ./
 RUN npm install
 
 # Copy the rest of the application
-COPY * .
+COPY . .
 
-# Expose port 3000 to the outside world
-EXPOSE 3000
+# Set environment variable
+ENV PORT=8080
+
+# Expose port 8080 to the outside world 
+EXPOSE 8080
+
 
 # Command to run the application
 CMD ["node", "server.js"]
